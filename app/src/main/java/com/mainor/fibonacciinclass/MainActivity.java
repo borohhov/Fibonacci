@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 int inputNumber = Integer.parseInt(inputEditText.getText().toString());
                 if(inputNumber > 0){
-                    goButton.setText(String.valueOf(FibonacciGenerator.getFibonacciNums(inputNumber)));
-                    //startActivity(new Intent(context, RecyclerActivity.class).putExtra("Input", inputNumber));
+                    //goButton.setText(String.valueOf(FibonacciGenerator.getFibonacciNums(inputNumber)));
+                    startActivity(new Intent(context, RecyclerActivity.class).putExtra("Input", inputNumber));
                 }
             }
         });
