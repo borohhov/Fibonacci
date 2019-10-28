@@ -1,6 +1,7 @@
 package com.mainor.fibonacciinclass;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
@@ -10,6 +11,6 @@ public class RecyclerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler);
-
+        RecyclerView recyclerView = findViewById(R.id.recycler);
     }
 }
