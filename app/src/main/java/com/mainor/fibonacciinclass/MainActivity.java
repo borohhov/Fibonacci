@@ -17,13 +17,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final EditText inputEditText = findViewById(R.id.mainactivity_et_input);
-        Button goButton = findViewById(R.id.mainactivity_button);
+        final Button goButton = findViewById(R.id.mainactivity_button);
         goButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int inputNumber = Integer.parseInt(inputEditText.getText().toString());
                 if(inputNumber > 0){
-                    startActivity(new Intent(context, RecyclerActivity.class).putExtra("Input", inputNumber));
+                    goButton.setText(String.valueOf(FibonacciGenerator.getFibonacciNums(inputNumber)));
+                    //startActivity(new Intent(context, RecyclerActivity.class).putExtra("Input", inputNumber));
                 }
             }
         });
