@@ -13,6 +13,8 @@ public class FibonacciGenerator {
         //System.out.print(n1+" "+n2);//printing 0 and 1
         list.add(n1);
         list.add(n2);
+        String s;
+        
         for(i=2;i<count;++i)//loop starts from 2 because 0 and 1 are already printed
         {
             n3=n1+n2;
