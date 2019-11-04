@@ -12,5 +12,8 @@ public class RecyclerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler);
         RecyclerView recyclerView = findViewById(R.id.recycler);
+        int count = getIntent().getIntExtra("Input", 10);
+        FibonacciAdapter adapter = new FibonacciAdapter(FibonacciGenerator.getFibonacciNums(count));
+        recyclerView.setAdapter(adapter);
     }
 }
